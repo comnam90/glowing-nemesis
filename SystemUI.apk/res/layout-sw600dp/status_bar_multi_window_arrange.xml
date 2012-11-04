@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.android.systemui.multiwindow.MultiWindowControlPanel android:gravity="center" android:paddingRight="140.0dip" android:paddingBottom="@*android:dimen/system_bar_height" android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@id/content_parent" android:background="@drawable/APKTOOL_DUMMY_0154" android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <LinearLayout android:orientation="horizontal" android:id="@id/mw_arrange_frame" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <ImageView android:id="@id/button_cascade_mode" android:background="@drawable/tw_notification_row_bg" android:focusable="true" android:clickable="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/APKTOOL_DUMMY_0118" android:scaleType="center" />
+            <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/APKTOOL_DUMMY_0155" android:scaleType="center" />
+            <ImageView android:id="@id/button_split_mode" android:background="@drawable/tw_notification_row_bg" android:focusable="true" android:clickable="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/APKTOOL_DUMMY_011d" android:scaleType="center" />
+            <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/APKTOOL_DUMMY_0155" android:scaleType="center" />
+            <ImageView android:id="@id/button_split3l_mode" android:background="@drawable/tw_notification_row_bg" android:focusable="true" android:clickable="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/APKTOOL_DUMMY_011a" android:scaleType="center" />
+            <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/APKTOOL_DUMMY_0155" android:scaleType="center" />
+            <ImageView android:id="@id/button_split3r_mode" android:background="@drawable/tw_notification_row_bg" android:focusable="true" android:clickable="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/APKTOOL_DUMMY_011b" android:scaleType="center" />
+            <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/APKTOOL_DUMMY_0155" android:scaleType="center" />
+            <ImageView android:id="@id/button_split4_mode" android:background="@drawable/tw_notification_row_bg" android:focusable="true" android:clickable="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/APKTOOL_DUMMY_011c" android:scaleType="center" />
+        </LinearLayout>
+    </RelativeLayout>
+</com.android.systemui.multiwindow.MultiWindowControlPanel>
