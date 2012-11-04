@@ -79,6 +79,52 @@
     return-void
 .end method
 
+.method private getBattery()I
+    .locals 2
+
+    const v1, 0x7f020067
+
+    new-instance v0, Ljava/io/File;
+
+    const-string p0, "/sdcard/alliance-tweak/themable_battery"
+
+    invoke-direct {v0, p0}, Ljava/io/File;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v0}, Ljava/io/File;->exists()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    const v1, 0x7f0202cf
+
+    :cond_0
+    return v1
+.end method
+
+.method private getBatteryCharge()I
+    .locals 2
+
+    const v1, 0x7f020070
+
+    new-instance v0, Ljava/io/File;
+
+    const-string p0, "/sdcard/alliance-tweak/themable_battery"
+
+    invoke-direct {v0, p0}, Ljava/io/File;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v0}, Ljava/io/File;->exists()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    const v1, 0x7f0202d0
+
+    :cond_0
+    return v1
+.end method
+
 
 # virtual methods
 .method public addIconView(Landroid/widget/ImageView;)V
@@ -206,7 +252,9 @@
     .line 69
     if-eqz v6, :cond_1
 
-    const v3, 0x7f020070
+    invoke-direct {p0}, Lcom/android/systemui/statusbar/policy/BatteryController;->getBatteryCharge()I
+
+    move-result v3
 
     .line 74
     .local v3, icon:I
@@ -324,7 +372,9 @@
     .end local v3           #icon:I
     .end local v7           #v:Landroid/widget/ImageView;
     :cond_1
-    const v3, 0x7f020067
+    invoke-direct {p0}, Lcom/android/systemui/statusbar/policy/BatteryController;->getBattery()I
+
+    move-result v3
 
     goto :goto_0
 
@@ -338,7 +388,9 @@
     invoke-static {v8, v9}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 78
-    const v3, 0x7f020070
+    invoke-direct {p0}, Lcom/android/systemui/statusbar/policy/BatteryController;->getBatteryCharge()I
+
+    move-result v3
 
     .line 79
     goto :goto_1
@@ -372,7 +424,9 @@
 
     .line 86
     :cond_3
-    const v3, 0x7f020067
+    invoke-direct {p0}, Lcom/android/systemui/statusbar/policy/BatteryController;->getBattery()I
+
+    move-result v3
 
     .line 87
     const-string v8, "STATUSBAR-BatteryController"
@@ -429,7 +483,9 @@
 
     .line 100
     :cond_5
-    const v3, 0x7f020067
+    invoke-direct {p0}, Lcom/android/systemui/statusbar/policy/BatteryController;->getBattery()I
+
+    move-result v3
 
     .line 102
     goto/16 :goto_1
@@ -451,7 +507,9 @@
     invoke-static {v8, v9}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     .line 110
-    const v3, 0x7f020067
+    invoke-direct {p0}, Lcom/android/systemui/statusbar/policy/BatteryController;->getBattery()I
+
+    move-result v3
 
     .line 111
     goto/16 :goto_1
